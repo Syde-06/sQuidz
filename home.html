@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - sQuidZ</title>
+    <title>sQuidZ - Quiz Platform</title>
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
         </a>
         
         <div class="nav-links">
-            <a href="home.html" class="active">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="leaderboard.html">Leaderboard</a>
         </div>
         
@@ -36,7 +36,7 @@
         
         <!-- Quick Actions -->
         <div class="quick-actions">
-            <a href="home.html" class="action-card purple">
+            <a href="index.html" class="action-card purple">
                 <h3>Join a Quiz</h3>
                 <p>Jump into an existing quiz and test your knowledge</p>
             </a>
@@ -50,37 +50,45 @@
         <!-- Available Quizzes -->
         <h2 class="section-title">Available Quizzes</h2>
         <div class="quiz-grid">
-            <a href="quiz-session.html" class="quiz-card">
+            <!-- Updated button to pass quiz ID via URL parameter -->
+            <div class="quiz-card" data-quiz="world-capitals">
                 <h3>World Capitals</h3>
                 <p>A fun quiz to test your geography knowledge!</p>
                 <div class="quiz-meta">
                     <span>5 questions</span>
                     <span>30s per question</span>
                 </div>
-                <button class="quiz-btn">Start Quiz</button>
-            </a>
+                <button class="quiz-btn" onclick="startQuizFromButton(this)">Start Quiz</button>
+            </div>
             
-            <a href="quiz-session.html" class="quiz-card">
+            <div class="quiz-card" data-quiz="science-challenge">
                 <h3>Science Challenge</h3>
                 <p>Test your science knowledge!</p>
                 <div class="quiz-meta">
                     <span>3 questions</span>
                     <span>20s per question</span>
                 </div>
-                <button class="quiz-btn">Start Quiz</button>
-            </a>
+                <button class="quiz-btn" onclick="startQuizFromButton(this)">Start Quiz</button>
+            </div>
             
-            <a href="quiz-session.html" class="quiz-card">
+            <div class="quiz-card" data-quiz="history-trivia">
                 <h3>History Trivia</h3>
                 <p>How well do you know world history?</p>
                 <div class="quiz-meta">
                     <span>10 questions</span>
                     <span>25s per question</span>
                 </div>
-                <button class="quiz-btn">Start Quiz</button>
-            </a>
+                <button class="quiz-btn" onclick="startQuizFromButton(this)">Start Quiz</button>
+            </div>
         </div>
     </div>
-</body>
 
+    <script>
+        function startQuizFromButton(button) {
+            const quizCard = button.closest('.quiz-card');
+            const quizId = quizCard.dataset.quiz;
+            window.location.href = `quiz-session.html?quiz=${quizId}`;
+        }
+    </script>
+</body>
 </html>
