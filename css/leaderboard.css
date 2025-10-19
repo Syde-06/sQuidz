@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #faf5ff 0%, #ffffff 50%, #eff6ff 100%);
+            min-height: 100vh;
+        }
+        
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 64px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            transform: rotate(45deg);
+            border-radius: 5px;
+        }
+        
+        .logo-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #111827;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 48px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #8b5cf6;
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .profile-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #a78bfa;
+        }
+        
+        /* Main Content */
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 56px 64px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            font-weight: 500;
+            color: #8b5cf6;
+        }
+        
+        /* Leaderboard Table */
+        .leaderboard-table {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        .table-header {
+            display: grid;
+            grid-template-columns: 150px 1fr 150px;
+            padding: 24px 40px;
+            background: #faf5ff;
+            color: #7c3aed;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+        
+        .table-body {
+            border-top: 1px solid #f3f4f6;
+        }
+        
+        .table-row {
+            display: grid;
+            grid-template-columns: 150px 1fr 150px;
+            padding: 28px 40px;
+            border-bottom: 1px solid #f3f4f6;
+            transition: all 0.3s;
+            align-items: center;
+        }
+        
+        .table-row:hover {
+            background: #faf5ff;
+            transform: translateX(4px);
+        }
+        
+        .table-row:last-child {
+            border-bottom: none;
+        }
+        
+        .rank-cell {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .rank-icon {
+            font-size: 24px;
+        }
+        
+        .player-cell {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .player-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .player-name {
+            font-size: 18px;
+            font-weight: 500;
+            color: #111827;
+        }
+        
+        .streak-cell {
+            text-align: right;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .streak-top {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+            color: #8b5cf6;
+        }
+        
+        .streak-icon {
+            font-size: 28px;
+        }
+        
+        .streak-number {
+            font-size: 28px;
+        }
+        
+        .streak-normal {
+            color: #374151;
+        }

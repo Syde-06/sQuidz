@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Session - sQuidZ</title>
+    <link rel="stylesheet" href="css/quiz-session.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-icon"></div>
+            <span class="logo-text">sQuidZ</span>
+        </a>
+        
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="leaderboard.html">Leaderboard</a>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Quiz Card -->
+        <div class="quiz-card">
+            <div class="quiz-header">
+                <span class="question-counter" id="questionCounter">Question 1/5</span>
+                <div class="quiz-stats">
+                    <span>🔥 Streak: <span id="streak">0</span></span>
+                    <span>⭐ Score: <span id="score">0</span></span>
+                </div>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar" style="width: 20%;"></div>
+            </div>
+            
+            <h2 class="question-text" id="questionText">What is the capital of France?</h2>
+            
+            <div class="options-grid" id="optionsGrid">
+                <button class="option" data-answer="Berlin">Berlin</button>
+                <button class="option" data-answer="Paris">Paris</button>
+                <button class="option" data-answer="Madrid">Madrid</button>
+                <button class="option" data-answer="Rome">Rome</button>
+            </div>
+            
+            <div class="timer">
+                <div class="timer-circle timer-minutes">
+                    <span id="minutes">00</span>
+                </div>
+                <span class="timer-colon">:</span>
+                <div class="timer-circle timer-seconds">
+                    <span id="seconds">30</span>
+                </div>
+            </div>
+            <div class="timer-labels">
+                <span style="margin-right: 80px;">Minutes</span>
+                <span style="margin-left: 80px;">Seconds</span>
+            </div>
+        </div>
+        
+        <!-- Live Updates -->
+        <div class="live-updates">
+            <h3>Live Updates</h3>
+            
+            <div class="participant">
+                <img src="img/avatar/joel.webp" alt="Marc Joel Padilla" class="participant-avatar">
+                <div class="participant-info">
+                    <div class="participant-name">Marc Joel</div>
+                    <div class="participant-status status-correct">Correct!</div>
+                </div>
+                <span class="participant-score">+3</span>
+            </div>
+            
+            <div class="participant">
+                <img src="img/avatar/syd.webp" alt="Sydney" class="participant-avatar">
+                <div class="participant-info">
+                    <div class="participant-name">Sydney</div>
+                    <div class="participant-status status-incorrect">Incorrect</div>
+                </div>
+                <span class="participant-score">+0</span>
+            </div>
+            
+            <div class="participant">
+                <img src="img/avatar/kurt.webp" alt="Kurt" class="participant-avatar">
+                <div class="participant-info">
+                    <div class="participant-name">Kurt</div>
+                    <div class="participant-status status-correct">Correct!</div>
+                </div>
+                <span class="participant-score">+1</span>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="js/quiz-session.js"></script>
+</body>
+</html>
